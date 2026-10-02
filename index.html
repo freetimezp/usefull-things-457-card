@@ -1,26 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <title>Project</title>
+
+        <title>project</title>
     </head>
 
     <body>
-        <div class="card">
-            <div class="img-box">
-                <img src="./assets/images/card.jpg" alt="" />
-            </div>
-            <div class="details">
-                <h1>Special guest</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iusto praesentium quia quas! Omnis
-                    totam quis nostrum excepturi nisi? Dolorem!
-                </p>
-            </div>
-        </div>
+        <div class="ambient"></div>
+        <div class="bg"></div>
+
+        <main>
+            <article class="spartan-card">
+                <!-- =====================================================
+                     TOP HUD
+                ====================================================== -->
+
+                <div class="hud-top">
+                    <span>COLLECTION / #07</span>
+
+                    <div class="hud-status">
+                        <i></i>
+                        ACTIVE
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     IMAGE / CHARACTER
+                ====================================================== -->
+
+                <div class="character-layer">
+                    <div class="image-glow"></div>
+
+                    <img
+                        class="character"
+                        src="./assets/images/card.png"
+                        alt="Female Spartan warrior"
+                    />
+
+                    <div class="red-light"></div>
+                </div>
+
+                <!-- =====================================================
+                     CARD FRAME
+                ====================================================== -->
+
+                <div class="frame"></div>
+
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+
+                <!-- =====================================================
+                     LEFT SIDE LABEL
+                ====================================================== -->
+
+                <div class="vertical-label">
+                    <span>WARRIOR</span>
+                    <span>SPARTA</span>
+                </div>
+
+                <!-- =====================================================
+                     INITIAL COVER
+                ====================================================== -->
+
+                <div class="cover">
+                    <div class="cover-content">
+                        <div class="helmet-mark">
+                            <span></span>
+                        </div>
+
+                        <span class="eyebrow"> LEGENDARY WARRIOR </span>
+
+                        <h1>
+                            SPECIAL
+                            <strong>CARD</strong>
+                        </h1>
+
+                        <div class="cover-line"></div>
+
+                        <div class="enter">
+                            <span>INSPECT STATS</span>
+                            <b>↗</b>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     DETAIL PANEL
+                ====================================================== -->
+
+                <div class="details">
+                    <div class="details-inner">
+                        <div class="details-header">
+                            <div>
+                                <span class="small-label"> SPARTAN // 01 </span>
+
+                                <h2>
+                                    SPECIAL
+                                    <em>CARD</em>
+                                </h2>
+                            </div>
+
+                            <div class="helmet-symbol">♞</div>
+                        </div>
+
+                        <div class="divider">
+                            <span></span>
+                            <i></i>
+                            <span></span>
+                        </div>
+
+                        <p class="description">
+                            Born beneath the crimson banner of Sparta. Trained
+                            for war. Forged through discipline. A warrior whose
+                            presence turns the battlefield into legend.
+                        </p>
+
+                        <div class="stats">
+                            <div class="stat">
+                                <span>STRENGTH</span>
+                                <div class="bar">
+                                    <i style="--value: 94%"></i>
+                                </div>
+                                <b>94</b>
+                            </div>
+
+                            <div class="stat">
+                                <span>HONOR</span>
+                                <div class="bar">
+                                    <i style="--value: 87%"></i>
+                                </div>
+                                <b>87</b>
+                            </div>
+
+                            <div class="stat">
+                                <span>DISCIPLINE</span>
+                                <div class="bar">
+                                    <i style="--value: 98%"></i>
+                                </div>
+                                <b>98</b>
+                            </div>
+                        </div>
+
+                        <div class="spartan-action">
+                            <button class="action-btn" type="button">
+                                <span>OPEN PROFILE</span>
+                                <i>↗</i>
+                            </button>
+                        </div>
+
+                        <div class="details-footer">
+                            <span>EST. 480 BC</span>
+
+                            <div class="coordinates">
+                                <span>37° 04′ N</span>
+                                <span>22° 25′ E</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     SCAN LINE
+                ====================================================== -->
+
+                <div class="scan"></div>
+
+                <!-- =====================================================
+                     DECORATION
+                ====================================================== -->
+
+                <div class="crosshair crosshair-1"></div>
+                <div class="crosshair crosshair-2"></div>
+
+                <div class="red-dot dot-1"></div>
+                <div class="red-dot dot-2"></div>
+                <div class="red-dot dot-3"></div>
+
+                <div class="card-number">001</div>
+            </article>
+        </main>
 
         <script src="./assets/js/main.js"></script>
     </body>
