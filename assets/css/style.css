@@ -124,7 +124,7 @@ main {
     --mx: 0;
     --my: 0;
 
-    will-change: transform;
+    will-change: top, opacity;
 
     animation: cardReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -143,14 +143,13 @@ main {
 @keyframes cardReveal {
     from {
         opacity: 0;
-        transform: perspective(1200px) translateY(40px) rotateX(8deg)
-            scale(0.94);
+        top: 40px;
         filter: brightness(0.3) blur(4px);
     }
 
     to {
         opacity: 1;
-        transform: perspective(1200px) translateY(0) rotateX(0) scale(1);
+        top: 0px;
         filter: brightness(1) blur(0);
     }
 }
@@ -437,10 +436,6 @@ main {
     animation: statusFlicker 5s infinite;
 }
 
-.hud-status.glitch {
-    animation: hudGlitch 0.12s steps(2) both;
-}
-
 .hud-status i {
     width: 5px;
     height: 5px;
@@ -500,32 +495,6 @@ main {
         box-shadow:
             0 0 8px #ff0000,
             0 0 18px rgba(255, 0, 0, 0.7);
-    }
-}
-
-@keyframes hudGlitch {
-    0% {
-        transform: translateX(0);
-        filter: none;
-    }
-
-    25% {
-        transform: translateX(-2px);
-        filter: brightness(1.8);
-    }
-
-    50% {
-        transform: translateX(2px);
-        filter: brightness(0.7);
-    }
-
-    75% {
-        transform: translateX(-1px);
-    }
-
-    100% {
-        transform: translateX(0);
-        filter: none;
     }
 }
 
@@ -734,8 +703,6 @@ main {
         border-color 0.3s ease,
         background 0.3s ease,
         box-shadow 0.3s ease;
-
-    will-change: transform;
 }
 
 /* red sweep */
@@ -1621,15 +1588,5 @@ main {
 
     .details h2 {
         font-size: 30px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
     }
 }
